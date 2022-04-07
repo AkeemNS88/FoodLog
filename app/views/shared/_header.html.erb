@@ -16,25 +16,30 @@
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
               <span class="navbar-item">       
-              <%= link_to "Create new entry", new_entry_path, class: "button is-success"  %>
-              
-              
+              <%= link_to new_entry_path, class: "button is-dark"  do %>
+                <span> New Entry</span>
+              <% end %>
               </span> 
           </div>
         </div>
       </div>
     </nav>
   </div>
+              
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <button class="title">
-        <img src="/assets/calorie.gif"   alt="Logo">
-      </button>
+      
       <h1 class="title">
+        
         <% if content_for(:title)%>
-            <%= yield :title %>
+          <%= yield :title %>
+          <% else %>
+           <button class="title">
+             <img src="/assets/calorie.gif"   alt="Logo">
+           </button>
+
         <% end %>
       </h1>
     
