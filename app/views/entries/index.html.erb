@@ -1,6 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: blue"><%= notice %></p>
 
-<h1>Entries</h1>
+<h1>this tag needs to have the total for the day </h1>
+
+<%# this will have the calc day display  %>
 
 <div id="entries">
   <% @entries.each do |entry| %>
@@ -12,3 +14,4 @@
 </div>
 
 <%= link_to "New entry", new_entry_path %>
+<%# this is the entry conatiner and the children  %>

@@ -14,9 +14,12 @@ class EntriesTest < ApplicationSystemTestCase
     visit entries_url
     click_on "New entry"
 
-    fill_in "Calories", with: @entry.calories
+    fill_in "Caloires", with: @entry.caloires
+    fill_in "Carbohydrates", with: @entry.carbohydrates
     fill_in "Description", with: @entry.description
+    fill_in "Fats", with: @entry.fats
     fill_in "Meal type", with: @entry.meal_type
+    fill_in "Proteins", with: @entry.proteins
     click_on "Create Entry"
 
     assert_text "Entry was successfully created"
@@ -27,9 +30,12 @@ class EntriesTest < ApplicationSystemTestCase
     visit entry_url(@entry)
     click_on "Edit this entry", match: :first
 
-    fill_in "Calories", with: @entry.calories
+    fill_in "Caloires", with: @entry.caloires
+    fill_in "Carbohydrates", with: @entry.carbohydrates
     fill_in "Description", with: @entry.description
+    fill_in "Fats", with: @entry.fats
     fill_in "Meal type", with: @entry.meal_type
+    fill_in "Proteins", with: @entry.proteins
     click_on "Update Entry"
 
     assert_text "Entry was successfully updated"

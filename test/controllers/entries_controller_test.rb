@@ -17,7 +17,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create entry" do
     assert_difference("Entry.count") do
-      post entries_url, params: { entry: { calories: @entry.calories, description: @entry.description, meal_type: @entry.meal_type } }
+      post entries_url, params: { entry: { caloires: @entry.caloires, carbohydrates: @entry.carbohydrates, description: @entry.description, fats: @entry.fats, meal_type: @entry.meal_type, proteins: @entry.proteins } }
     end
 
     assert_redirected_to entry_url(Entry.last)
@@ -34,7 +34,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update entry" do
-    patch entry_url(@entry), params: { entry: { calories: @entry.calories, description: @entry.description, meal_type: @entry.meal_type } }
+    patch entry_url(@entry), params: { entry: { caloires: @entry.caloires, carbohydrates: @entry.carbohydrates, description: @entry.description, fats: @entry.fats, meal_type: @entry.meal_type, proteins: @entry.proteins } }
     assert_redirected_to entry_url(@entry)
   end
 
