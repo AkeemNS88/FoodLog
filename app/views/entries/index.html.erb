@@ -1,31 +1,14 @@
-<% content_for :title do%>
-  <img src="/assets/calorie.gif" alt="Logo"> 
-  &ndash; <%= DateTime.now.to_s(:nice_date) %>
-<% end %>
+<p style="color: green"><%= notice %></p>
 
-<div class="columns mt-6 is-centered">
+<h1>Entries</h1>
+
+<div id="entries">
   <% @entries.each do |entry| %>
-      <div class="column is-one-quarter">
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title"><%= entry.meal_type %></p>
-          </header>
-          <div class="card-content">
-            <div class="content">
-              <p><div class="has-text-weight-bold"></div><%= entry.description %></span></p>
-            </div>
-            <p class="is-italic is-size-7">Logged  <%= time_ago_in_words(entry.created_at) %> ago</p>
-          </div>
-          <div class="card-footer">
-            <%= link_to 'Show', entry, class: "card-footer-item" %>
-            <%= link_to 'Edit', edit_entry_path(entry), class: "card-footer-item" %>
-            <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item" %>
-          </div>
-        </div>  
-      </div>  
+    <%= render entry %>
+    <p>
+      <%= link_to "Show this entry", entry %>
+    </p>
   <% end %>
 </div>
 
-<div class="columns is-centered mt-6">
-  <%= link_to "View all entries" , archives_index_path, class: "button is-link is-outlined" %>
-</div>
+<%= link_to "New entry", new_entry_path %>
