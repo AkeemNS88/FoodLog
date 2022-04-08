@@ -3,15 +3,15 @@
 one:
   meal_type: MyString
   description: MyString
-  caloires: 1
+  calories: 1
+  protein: 1
   carbohydrates: 1
-  proteins: 1
   fats: 1
 
 two:
   meal_type: MyString
   description: MyString
-  caloires: 1
+  calories: 1
+  protein: 1
   carbohydrates: 1
-  proteins: 1
   fats: 1

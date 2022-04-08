@@ -42,6 +42,21 @@
   </div>
 
   <div>
+    <%= form.label :protein, style: "display: block" %>
+    <%= form.number_field :protein %>
+  </div>
+
+  <div>
+    <%= form.label :carbohydrates, style: "display: block" %>
+    <%= form.number_field :carbohydrates %>
+  </div>
+
+  <div>
+    <%= form.label :fats, style: "display: block" %>
+    <%= form.number_field :fats %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
