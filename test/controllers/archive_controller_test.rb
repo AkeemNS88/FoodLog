@@ -1,8 +1,8 @@
 require "test_helper"
 
-class ArchivesControllerTest < ActionDispatch::IntegrationTest
+class ArchiveControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get archives_index_url
+    get archive_index_url
     assert_response :success
   end
 end

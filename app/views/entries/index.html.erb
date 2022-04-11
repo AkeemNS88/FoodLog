@@ -5,13 +5,16 @@
 <div class="columns mt-6 is-centered">
   <div class="card-content">
    <div class="content">
-   <p>Meal types:<% @entries.each do |entry| %>  |  <%= entry.meal_type %>
-    <% end %> |</p>
-    <p> Total Calories: <%= @entries.pluck(:calories).sum %> </p>
-    <p> Total Carbohydrates: <%= @entries.pluck(:carbohydrates).sum %> </p>
-    <p> Total Protein: <%= @entries.pluck(:protein).sum %> </p>
-    <p> Total Fat: <%= @entries.pluck(:fats).sum %> </p>
+
+    <p>
+     <strong> Total meals:</strong><i> <%= @entries.all.count %> </i>
+     <strong>Total Calories:</strong><i> <%= @entries.pluck(:calories).sum %> </i>
+     <strong> Total Carbohydrates:</strong><i> <%= @entries.pluck(:carbohydrates).sum %> </i>
+     <strong>Total Protein: </strong><i> <%= @entries.pluck(:protein).sum %> </i>
+     <strong>Total Fat:</strong><i> <%= @entries.pluck(:fats).sum %> </i>
     <p colspan="3"></p>
+    </p>
+
     
   </div>
 </div>
