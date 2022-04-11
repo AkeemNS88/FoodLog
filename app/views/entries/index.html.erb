@@ -5,9 +5,7 @@
 <div class="columns mt-6 is-centered">
   <div class="card-content">
    <div class="content">
-   <p>Meal types:
-    <% @entries.each do |entry| %> |
-    <%= entry.meal_type %>
+   <p>Meal types:<% @entries.each do |entry| %>  |  <%= entry.meal_type %>
     <% end %> |</p>
     <p> Total Calories: <%= @entries.pluck(:calories).sum %> </p>
     <p> Total Carbohydrates: <%= @entries.pluck(:carbohydrates).sum %> </p>
