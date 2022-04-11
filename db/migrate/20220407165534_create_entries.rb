@@ -3,9 +3,9 @@ class CreateEntries < ActiveRecord::Migration[7.0]
     create_table :entries do |t|
       t.string :meal_type
       t.string :description
-      t.integer :caloires
+      t.integer :calories
       t.integer :carbohydrates
-      t.integer :proteins
+      t.integer :protein
       t.integer :fats
 
       t.timestamps
