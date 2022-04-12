@@ -57,7 +57,7 @@ Project is: In Progress
 
 -*Breaking apart into days (solved see above)*
 
--Create Auth for User accounts
+-Will need landing page and Auth (users will see their meals and totals)
 
 -Allow users to track caloric intake and macro goals
 
