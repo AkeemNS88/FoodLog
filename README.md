@@ -51,11 +51,17 @@ Project is: In Progress
 
 ## To Do
 
--Calories total for the day (solved)
+-*Calories total for the day (solved)*
 
--Archive system for week at a glance (solved, day to day tracking)
+-*Archive system for week at a glance (solved, day to day tracking)*
 
--Breaking apart into days (solved see above)
+-*Breaking apart into days (solved see above)*
 
+-Create Auth for User accounts
 
+-Allow users to track caloric intake and macro goals
+
+-Create method by which users are able to track goal remainders daily 
+
+-Brainstorming further ideas..
 

@@ -1,5 +1,7 @@
 <% content_for :title do %>
- <img src="/assets/calorie.gif"> &ndash; <%=Date.today.wday %>
+ <img src="/assets/calorie.gif">
+ <br> 
+ <%=Date.today.strftime('%A - %B %d, %Y') %> 
 <% end %>
 
 <div class="columns mt-6 is-centered">
