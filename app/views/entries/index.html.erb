@@ -1,17 +1,19 @@
 <% content_for :title do %>
- <img src="/assets/calorie.gif"> &ndash; <%= Date.today %>
+ <img src="/assets/calorie.gif"> &ndash; <%=Date.today.wday %>
 <% end %>
 
 <div class="columns mt-6 is-centered">
   <div class="card-content">
    <div class="content">
 
-    <p>
-     <strong> Total meals:</strong><i> <%= @entries.all.count %> </i>
-     <strong>Total Calories:</strong><i> <%= @entries.pluck(:calories).sum %> </i>
-     <strong> Total Carbohydrates:</strong><i> <%= @entries.pluck(:carbohydrates).sum %> </i>
-     <strong>Total Protein: </strong><i> <%= @entries.pluck(:protein).sum %> </i>
-     <strong>Total Fat:</strong><i> <%= @entries.pluck(:fats).sum %> </i>
+     <p  class="card-header-title is-centered">
+     <strong> Today's Meals:</strong><i style="color:MediumOrchid"> <%= @entries.all.count %> </i>
+     </p>
+     <p>
+     <strong>Calories:</strong><i> <%= @entries.pluck(:calories).sum %>g </i>
+     <strong> Total Carbohydrates:</strong><i> <%= @entries.pluck(:carbohydrates).sum %>g </i>
+     <strong>Total Protein: </strong><i> <%= @entries.pluck(:protein).sum %>g </i>
+     <strong>Total Fat:</strong><i> <%= @entries.pluck(:fats).sum %>g </i>
     <p colspan="3"></p>
     </p>
 
@@ -20,7 +22,7 @@
 </div>
 </div>
 <%# this will have the calc day display  %>
-<div class="columns mt-6 is-centered">
+<div class="columns mt-5 is-centered">
   <div id="entries">
     <% @entries.each do |entry| %>
       <%= render entry %>
@@ -33,8 +35,12 @@
 </div>
 <div class="columns mt-6 is-centered" >
   <button>
-        <%= link_to " New entry", new_entry_path %>
+    <%= link_to " New entry", new_entry_path %>
   </button>
+  <button class="is-link is-outlined is-centered">
+    <%= link_to "View all entries", archive_index_path %>
+  </button>
+</div>
 </div>
 
 <%# this is the entry conatiner and the children  %>
