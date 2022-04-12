@@ -51,11 +51,11 @@ Project is: In Progress
 
 ## To Do
 
--Calories total for the day
+-Calories total for the day (solved)
 
--Archive system for week at a glance
+-Archive system for week at a glance (solved, day to day tracking)
 
--Breaking apart into days
+-Breaking apart into days (solved see above)
 
 
 
