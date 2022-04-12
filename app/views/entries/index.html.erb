@@ -7,7 +7,7 @@
    <div class="content">
 
      <p  class="card-header-title is-centered">
-     <strong> Today's Meals:</strong><i style="color:MediumOrchid"> <%= @entries.all.count %> </i>
+     <strong> Today's Meals:</strong><i style="color:MediumOrchid"> <%= @entries.all.group_by(&:day).count %> </i>
      </p>
      <p>
      <strong>Calories:</strong><i> <%= @entries.pluck(:calories).sum %>g </i>
@@ -43,4 +43,13 @@
 </div>
 </div>
 
-<%# this is the entry conatiner and the children  %>
+<%# possible listing options for total  %>
+
+    <%# 
+    <%= @entries.pluck(:meal_type).join(' | ') %> 
+    
+    
+    <%# <% @entries.each do |entry| %> 
+    <%# <span class="language"><%= entry.meal_type %>
+    <%# </span> | %> 
+    <%# <% end %> 
